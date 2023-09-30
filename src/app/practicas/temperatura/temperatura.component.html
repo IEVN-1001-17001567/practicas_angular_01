@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="num1" class="form-label">Ingresa los grados que desea convertir</label>
+            <input type="text" [(ngModel)]='valorG' class="form-control" name="num1" placeholder="Numero1">
+        </div>      
+
+        <div class="form-check">
+            <input class="form-check-input" [(ngModel)]='conversion' type="radio" name="Centigrados" id="flexRadioDefault1" value="centi">
+            <label class="form-check-label" for="sumar">Convertir a Centígrados °C</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" [(ngModel)]='conversion' type="radio" name="Fahrenheit" id="flexRadioDefault2" value="fahre">
+            <label class="form-check-label" for="restar">Convertir a Fahrenheit °F</label>
+        </div>        
+
+        <div class="mb-3">
+            <button (click)="convGrados()" class="btn btn-primary">Calcular</button>
+        </div>
+    </div>
+    <div class="col-6">
+        <h2>Resultado: {{mensaje}}</h2>
+    </div>
+</div>
