@@ -1,0 +1,37 @@
+body{
+    background-image: url(https://sic.cultura.gob.mx/images/128162);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    background-color: white;
+    background-size: 50px 50px;
+}
+
+.datos{
+    border: white 5px solid;
+    width: 450px;
+    height:500px;
+    margin-left: 90px;
+}
+
+.resultados{
+    /* position: relative; */
+    border: white 5px solid;
+    width: 350px;
+    height: 200px;
+    margin-left: 850px;
+    margin-top: -500px;
+}
+
+.botones{
+    border: white 5px solid;
+    width: 250px;
+    height: 100px;
+    margin-top: 325px;
+    margin-left: 600px;
+}

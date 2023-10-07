@@ -2,25 +2,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule } from '@angular/forms';
-import { MatInputModule} from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MultiplicacionAxBComponent } from './practicas/multiplicacion-ax-b/multiplicacion-ax-b.component';
 import { TemperaturaComponent } from './practicas/temperatura/temperatura.component';
+import { MaterialModule } from './material/material/material.module';
+import { MenuComponent } from './menu/menu/menu.component';
+import { CinepolisComponent } from './practicas/cinepolis/cinepolis.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MultiplicacionAxBComponent,
-    TemperaturaComponent
+    TemperaturaComponent,
+    MenuComponent,
+    CinepolisComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    MatInputModule,
-    MatButtonModule,
+    MaterialModule,
     BrowserAnimationsModule
   ],
   providers: [],

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cinepolis</h1>    
+    <div class="datos" style="color: white;">
+        <h2>Entradas</h2>
+        <p>Nombre: </p>
+        <mat-form-field>        
+            <input matInput [(ngModel)]="nombre" type="string" placeholder="Nombre">
+        </mat-form-field>
+        <br>
+        <p>Cantidad de Compradores: </p>
+        <mat-form-field>
+            <input matInput [(ngModel)]="cantComp" type="number">
+        </mat-form-field>
+        <p>Tarjeta Cineco: </p>
+        <div class="form-check">            
+            <input class="form-check-input" [(ngModel)]='tarCin' type="radio" name="Tarjeta" id="flexRadioDefault1" value="si">
+            <label class="form-check-label" for="sumar">SI</label>        
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" [(ngModel)]='tarCin' type="radio" name="Tarjeta" id="flexRadioDefault1" checked value="no">
+            <label class="form-check-label" for="sumar">NO</label>
+        </div>
+        <br>
+        <p>Cantidad de Boletos: </p>
+        <mat-form-field>
+            <input matInput [(ngModel)]="cantBole" type="number">
+        </mat-form-field>
+    </div>    
+    <div class="resultados" style="color: white;">
+        <h2>Salidas</h2>
+        <h2>Valor a Pagar: {{cuenta}}</h2>
+        <h2>{{mensaje}}</h2>
+    </div>
+    <div class="botones" style="color: black;">        
+        <h2 style="color: white;">Acciones</h2>
+        <button mat-raised-button color="accent" (click)="calcular()">Procesar</button>
+        <button mat-raised-button color="warn">Salir</button>
+    </div>
+</body>
+</html>
