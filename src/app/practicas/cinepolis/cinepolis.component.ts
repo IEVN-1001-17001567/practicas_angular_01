@@ -10,7 +10,7 @@ export class CinepolisComponent {
   nombre:string="";
   cantComp:number=0;  
   cantBole:number=0;
-  boleta:number=12000;
+  boleta:number=12;
   mensaje:string="";
   perm:number=0;
   
@@ -35,19 +35,20 @@ export class CinepolisComponent {
         if(this.cantBole>5){
           this.desc="15";
         }
-        if(this.cantBole>2){
-          this.desc="10";
+        else{
+          if(this.cantBole>2){
+            this.desc="10";
+          }
         }
     
         switch(this.desc){
           case '15':
-            this.cuenta=(this.boleta*this.cantBole)*.85;
+            this.cuenta=((this.boleta*this.cantBole)*.85);
             break;
           case '10':
-            this.cuenta=(this.boleta*this.cantBole)*.9;
+            this.cuenta=((this.boleta*this.cantBole)*.9);
             break;
-    
-          default:
+          case '':
             this.cuenta=(this.boleta*this.cantBole);
             break;
         }
@@ -59,7 +60,21 @@ export class CinepolisComponent {
       }
       else{
           this.mensaje=("No puedes comprar más de 7 boletos")
-      }    
+      }
     }
+  }
+
+  salir(){
+    this.nombre="";
+    this.cantComp=0;  
+    this.cantBole=0;
+    this.boleta=12;
+    this.mensaje="";
+    this.perm=0;
+    
+    this.desc="";
+    this.tarCin="No ";
+
+    this.cuenta=0;
   }
 }
